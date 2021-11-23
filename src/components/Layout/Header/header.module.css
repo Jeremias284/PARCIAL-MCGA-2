@@ -1,0 +1,18 @@
+.headerContainer {
+    width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(116, 155, 148);
+  }
+  
+  .title {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
