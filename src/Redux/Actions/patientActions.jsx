@@ -13,7 +13,7 @@ import {
     DELETE_PATIENT_REJECTED,
   } from '../Types/patientActionTypes';
   
-  const URL = process.env.REACT_APP_BACKEND_URL;
+  const URL = process.env.DB_MONGODB;
   
   export const getPatientsFetching = () => ({
     type: GET_PATIENTS_FETCHING,
