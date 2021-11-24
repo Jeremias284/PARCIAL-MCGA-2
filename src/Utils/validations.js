@@ -1,7 +1,7 @@
-export const required = (value) => (value ? undefined : 'this field is required ❗');
+export const required = (value) => (value ? undefined : 'This field is required ❗');
 
 export const string = (value) =>
-  /^[A-Za-z\s]+$/.test(value) ? undefined : 'Only letters';
+  /^[A-Za-z\s]+$/.test(value) ? undefined : 'Only letters allowed';
 
 export const number = (value) => (!Number(value) ? 'Only numbers' : undefined);
 
