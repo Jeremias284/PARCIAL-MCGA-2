@@ -8,6 +8,9 @@ export const number = (value) => (!Number(value) ? 'Only numbers' : undefined);
 export const trim = (value) =>
   !/(^\s)|(\s$)/.test(value) ? undefined : 'Invalid format';
 
+  export const minValue = (value) =>
+  value < 1 ? 'Minimum age is 1' : undefined;
+
 export const composeValidators =
   (...validators) =>
   (value) => validators.reduce(

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'Redux';
+import { bindActionCreators } from 'redux';
 import { closeModal as closeModalAction } from '../../../Redux/Actions/modalActions';
 import { deletePatient as deletePatientAction } from '../../../Redux/Actions/patientActions';
 import Button from '../../Shared/Button';

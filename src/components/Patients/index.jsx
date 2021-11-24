@@ -6,10 +6,10 @@ import { getPatients as getPatientsAction } from '../../Redux/Actions/patientAct
 import { showModal as showModalAction } from '../../Redux/Actions/modalActions';
 import modalTypes from '../../Redux/Types/modalTypes';
 import PatientList from './PatientList';
-import PatientList from './PatientForm';
+import PatientForm from './PatientForm';
 import ConfirmationMessage from './ConfirmationMessage';
 import Modal from '../Shared/Modal';
-import styles from './patients.module.css';
+import styles from './patientList.module.css';
 
 const Patients = ({ patients, getPatients, showModal, modalType, meta }) => {
   useEffect(() => {

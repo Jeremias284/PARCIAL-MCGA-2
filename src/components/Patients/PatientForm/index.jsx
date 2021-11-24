@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'Redux';
+import { bindActionCreators } from 'redux';
 import { Form, Field } from 'react-final-form';
 import {
   required,
@@ -18,7 +18,7 @@ import { closeModal as closeModalAction } from '../../../Redux/Actions/modalActi
 import Button from '../../Shared/Button';
 import Select from '../../Shared/Select';
 import TextInput from '../../Shared/TextInput';
-import styles from './PatientForm.module.css';
+import styles from './patientForm.module.css';
 
 const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
   const onSubmitPatient = (values) => {

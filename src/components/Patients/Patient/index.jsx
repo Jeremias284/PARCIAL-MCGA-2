@@ -1,7 +1,7 @@
 import { FaTimes, FaEdit } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'Redux';
+import { bindActionCreators } from 'redux';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import modalTypes from '../../../Redux/Types/modalTypes';

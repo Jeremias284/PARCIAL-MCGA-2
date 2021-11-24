@@ -11,7 +11,7 @@ import {
     DELETE_PATIENT_FETCHING,
     DELETE_PATIENT_FULFILLED,
     DELETE_PATIENT_REJECTED,
-  } from '../types/patientActionTypes';
+  } from '../Types/patientActionTypes';
   
   const initialState = {
     isLoading: false,
