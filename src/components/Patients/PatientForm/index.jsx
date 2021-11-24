@@ -20,7 +20,7 @@ import Select from '../../Shared/Select';
 import TextInput from '../../Shared/TextInput';
 import styles from './patientForm.module.css';
 
-const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
+export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
   const onSubmitPatient = (values) => {
     if (patient) {
       updatePatient({ ...values, id: patient._id });

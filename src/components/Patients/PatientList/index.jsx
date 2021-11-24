@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 import Patient from '../Patient';
 import styles from './patientList.module.css';
 
-const PatientList = ({ patients }) => {
+export const PatientList = ({ patients }) => {
   return (
     <div>
       {patients.isLoading ? (
