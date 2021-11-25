@@ -10,10 +10,13 @@ import PatientForm from './PatientForm';
 import ConfirmationMessage from './ConfirmationMessage';
 import Modal from '../Shared/Modal';
 import styles from './patientList.module.css';
+import { useDispatch } from 'react-redux';
+
 
 const Patients = ({ patients, getPatients, showModal, modalType, meta }) => {
+  const dispatch = useDispatch();
   useEffect(() => {
-    getPatients();
+    dispatch(getPatients());
   }, []);
 
   const showAddModal = () => {

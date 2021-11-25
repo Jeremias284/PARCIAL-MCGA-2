@@ -32,9 +32,10 @@ import {
     return fetch(`${URL}/patients`)
       .then((data) => data.json())
       .then((response) => {
+        console.log(response);
         dispatch(getPatientsFulfilled(response));
       })
-      .catch(() => {
+      .catch((nombre) => {
         dispatch(getPatientsRejected());
       });
   };
