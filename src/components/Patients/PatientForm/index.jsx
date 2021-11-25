@@ -58,7 +58,7 @@ const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
         onSubmit={onSubmitPatient}
         initialValues={{
           name: patient ? patient.name : '',
-          lastName: patient ? patient.lastName : '',
+          surname: patient ? patient.surname : '',
           age: patient ? patient.age : '',
           turn: patient ? patient.turn : 'Friday',
           doctor: patient ? patient.doctor : 'DrCalzada',
@@ -79,7 +79,7 @@ const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
             </div>
             <div className={styles.textInput}>
               <Field
-                name="lastName"
+                name="surname"
                 component={TextInput}
                 placeholder="Add last name"
                 label="Last name:"

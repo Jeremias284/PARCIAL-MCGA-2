@@ -20,7 +20,7 @@ const Patients = ({ patients, getPatients, showModal, modalType, meta }) => {
   }, []);
 
   const showAddModal = () => {
-    showModal(modalTypes.ADD_PATIENT);
+    showModal(modalTypes.ADD_PATIENT); 
   };
 
   return (
@@ -46,7 +46,7 @@ const Patients = ({ patients, getPatients, showModal, modalType, meta }) => {
         )}{' '}
       </Modal>
 
-      <PatientList patient={patients} />
+      <PatientList patients={patients} />
     </div>
   );
 };
