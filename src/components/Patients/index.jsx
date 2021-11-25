@@ -1,20 +1,25 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Button from '@mui/material/Button';
-import { getPatients as getPatientsAction } from '../../Redux/Actions/patientActions';
-import { showModal as showModalAction } from '../../Redux/Actions/modalActions';
+import {getPatients} from '../../Redux/Actions/patientActions';
+import { showModal } from '../../Redux/Actions/modalActions';
 import modalTypes from '../../Redux/Types/modalTypes';
 import PatientList from './PatientList';
 import PatientForm from './PatientForm';
 import ConfirmationMessage from './ConfirmationMessage';
 import Modal from '../Shared/Modal';
 import styles from './patientList.module.css';
+import { useDispatch, useSelector } from 'react-redux';
 
-const Patients = ({ patients, getPatients, showModal, modalType, meta }) => {
+const Patients = () => {
+  const dispatch = useDispatch();
+  const { list, modalType, meta, isLoading } = useSelector(
+    (state) => state.patients
+  );
   useEffect(() => {
-    getPatients();
+    dispatch(getPatients());
+    return () => {};
   }, []);
+
 
   const showAddModal = () => {
     showModal(modalTypes.ADD_PATIENT); 
@@ -43,24 +48,10 @@ const Patients = ({ patients, getPatients, showModal, modalType, meta }) => {
         )}{' '}
       </Modal>
 
-      <PatientList patients={patients} />
+      <PatientList patients={list} isLoading={isLoading} />
     </div>
   );
 };
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators(
-    {
-      getPatients: getPatientsAction,
-      showModal: showModalAction,
-    },
-    dispatch
-  );
-};
 
-const mapStateToProps = (state) => ({
-  patients: state.patients,
-  modalType: state.modal.modalType,
-  meta: state.modal.meta,
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Patients);
+export default Patients;
