@@ -9,7 +9,7 @@ import { showModal as showModalAction } from '../../../Redux/Actions/modalAction
 import styles from './patient.module.css';
 
 export const Patient = ({ patient, showModal }) => {
-  const { _id, name, lastName, age, DNI, turns, doctor } = patient;
+  const { _id, name, surname, age, DNI, turns, doctor } = patient;
 
   const showDeleteModal = (patientId, patientName) => {
     showModal(modalTypes.DELETE_PATIENT, {
@@ -41,7 +41,7 @@ export const Patient = ({ patient, showModal }) => {
       <TableCell component="th" scope="row">
         {name}
       </TableCell>
-      <TableCell align="right">{lastName}</TableCell>
+      <TableCell align="right">{surname}</TableCell>
       <TableCell align="right">{age}</TableCell>
       <TableCell align="right">{DNI}</TableCell>
       <TableCell align="right">{turns}</TableCell>

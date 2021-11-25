@@ -22,7 +22,7 @@ export const PatientList = ({ patients }) => {
                 <TableCell className={styles.colPatient}>Action</TableCell>
                 <TableCell className={styles.colPatient}>Name</TableCell>
                 <TableCell className={styles.colPatient} align="right">
-                  Lastname
+                  Surname
                 </TableCell>
                 <TableCell className={styles.colPatient} align="right">
                   Age
