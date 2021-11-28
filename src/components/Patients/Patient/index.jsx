@@ -5,12 +5,12 @@ import { bindActionCreators } from 'redux';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import modalTypes from '../../../Redux/Types/modalTypes';
+
 import { showModal as showModalAction } from '../../../Redux/Actions/modalActions';
 import styles from './patient.module.css';
 
 export const Patient = ({ patient, showModal }) => {
   const { _id, name, surname, age, DNI, turns, doctor } = patient;
-
   const showDeleteModal = (patientId, patientName) => {
     showModal(modalTypes.DELETE_PATIENT, {
       id: patientId,

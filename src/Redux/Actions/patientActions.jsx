@@ -15,6 +15,7 @@ import {
   
   const URL = process.env.URL_HEROKU;
 
+  const urlString = 'http://localhost:7000';
   
   export const getPatientsFetching = () => ({
     type: GET_PATIENTS_FETCHING,
@@ -31,10 +32,10 @@ import {
   
   export const getPatients = () => (dispatch) => {
     dispatch(getPatientsFetching());
-    return fetch(`${URL}/patients`)
+    return fetch(`http://localhost:7000/patients`)
       .then((data) => data.json())
       .then((response) => {
-        console.log(response);
+       console.log(response);
         dispatch(getPatientsFulfilled(response));
       })
       .catch((nombre) => {
@@ -57,7 +58,7 @@ import {
   
   export const addPatient = (patient) => (dispatch) => {
     dispatch(addPatientFetching());
-    return fetch(`${URL}/patients`, {
+    return fetch(`${urlString}/patients`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

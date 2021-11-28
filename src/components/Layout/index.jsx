@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import Main from './Main';
 import Footer from './Footer';
 import styles from './layout.module.css';
+import PropTypes from 'prop-types'
 
 const Layout = ({ people }) => (
   <div className={styles.layoutContainer}>
@@ -15,5 +16,8 @@ const Layout = ({ people }) => (
     </div>
   </div>
 );
+Layout.propTypes = {
+  people: PropTypes.object.isRequired,
+};
 
 export default Layout;
