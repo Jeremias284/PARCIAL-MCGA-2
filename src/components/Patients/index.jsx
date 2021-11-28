@@ -32,19 +32,20 @@ const Patients = () => {
           border: '1px solid black',
           fontWeight: '700',
         }}
+        
         onClick={() => showAddModal()}
       >
         Add Patient
       </Button>
-
+        
       <Modal>
-        {modalType === 'ADD_PATIENT' && (<PatientForm />)}
+        {modalType === 'ADD_PATIENT' && (<PatientForm />)}{ ' ' }
         {modalType === 'DELETE_PATIENT' && (
           <ConfirmationMessage patientId={meta.id} patientName={meta.name} />
         )}
         {modalType === 'UPDATE_PATIENT' && (
           <PatientForm patient={meta.patient} />
-        )}
+        )}{ ' ' }
       </Modal>
 
       <PatientList patients={list} isLoading={isLoading} />

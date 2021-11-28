@@ -58,7 +58,7 @@ import {
   
   export const addPatient = (patient) => (dispatch) => {
     dispatch(addPatientFetching());
-    return fetch(`${urlString}/patients`, {
+    return fetch(`http://localhost:7000/patients`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -89,7 +89,7 @@ import {
   
   export const updatePatient = (patient) => (dispatch) => {
     dispatch(updatePatientFetching());
-    return fetch(`${URL}/patients/${patient.id}`, {
+    return fetch(`http://localhost:7000/patients/${patient.id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -120,7 +120,7 @@ import {
   
   export const deletePatient = (id) => (dispatch) => {
     dispatch(deletePatientFetching());
-    return fetch(`${URL}/patients/${id}`, {
+    return fetch(`http://localhost:7000/patients/${id}`, {
       method: 'DELETE',
     })
       .then((data) => data.json())
