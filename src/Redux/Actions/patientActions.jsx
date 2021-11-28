@@ -14,7 +14,7 @@ import {
   } from '../Types/patientActionTypes';
   
   const URL = process.env.URL_HEROKU;
-
+  
   
   export const getPatientsFetching = () => ({
     type: GET_PATIENTS_FETCHING,
