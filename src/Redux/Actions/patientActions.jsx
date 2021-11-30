@@ -13,7 +13,7 @@ import {
     DELETE_PATIENT_REJECTED,
   } from '../Types/patientActionTypes';
   
-  const URL = process.env.URL_HEROKU;
+  // const URL = process.env.URL_HEROKU;
 
   const urlString = 'http://localhost:7000';
   
