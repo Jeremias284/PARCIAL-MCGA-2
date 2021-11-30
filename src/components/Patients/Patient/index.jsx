@@ -14,7 +14,7 @@ const Patient = ({ patient, showModal }) => {
   const showDeleteModal = (patientId, patientName) => {
     showModal(modalTypes.DELETE_PATIENT, {
       id: patientId,
-      name: patientName,
+      name: patientName
     });
   };
 

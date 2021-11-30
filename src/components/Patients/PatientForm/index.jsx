@@ -20,8 +20,9 @@ import Select from '../../Shared/Select';
 import TextInput from '../../Shared/TextInput';
 import styles from './patientForm.module.css';
 
-const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
-  console.log("ENTRE AL FORM")
+
+export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
+  console.log("Entre");
   const onSubmitPatient = (values) => {
     if (patient) {
       updatePatient({ ...values, id: patient._id });
@@ -61,6 +62,7 @@ const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
           name: patient ? patient.name : '',
           surname: patient ? patient.surname : '',
           age: patient ? patient.age : '',
+          DNI: patient ? patient.DNI: '',
           turn: patient ? patient.turn : 'Friday',
           doctor: patient ? patient.doctor : 'DrCalzada',
         }}
@@ -93,6 +95,15 @@ const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
                 component={TextInput}
                 placeholder="Add age"
                 label="Age:"
+                validate={composeValidators(required, number, minValue, trim)}
+              />
+            </div>
+            <div className={styles.textInput}>
+              <Field
+                name="DNI"
+                component={TextInput}
+                placeholder="Add DNI"
+                label="DNI  :"
                 validate={composeValidators(required, number, minValue, trim)}
               />
             </div>
