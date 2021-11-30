@@ -57,6 +57,7 @@ import {
   });
   
   export const addPatient = (patient) => (dispatch) => {
+    console.log('ingresa add')
     dispatch(addPatientFetching());
     return fetch(`http://localhost:7000/patients`, {
       method: 'POST',
