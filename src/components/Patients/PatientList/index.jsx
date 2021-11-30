@@ -28,6 +28,9 @@ export const PatientList = ({ patients }) => {
                   Age
                 </TableCell>
                 <TableCell className={styles.colPatient} align="right">
+                  DNI
+                </TableCell>
+                <TableCell className={styles.colPatient} align="right">
                   Turn
                 </TableCell>
                 <TableCell className={styles.colPatient} align="right">
@@ -36,8 +39,8 @@ export const PatientList = ({ patients }) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {patients.list.map((patient) => (
-                <Patient key={patient._id} patient={patient} />
+              {patients.map((pat) => (
+                <Patient key={pat._id} patient={pat} />
               ))}
             </TableBody>
           </Table>

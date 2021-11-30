@@ -8,9 +8,9 @@ import modalTypes from '../../../Redux/Types/modalTypes';
 import { showModal as showModalAction } from '../../../Redux/Actions/modalActions';
 import styles from './patient.module.css';
 
-export const Patient = ({ patient, showModal }) => {
+//export
+const Patient = ({ patient, showModal }) => {
   const { _id, name, surname, age, DNI, turns, doctor } = patient;
-
   const showDeleteModal = (patientId, patientName) => {
     showModal(modalTypes.DELETE_PATIENT, {
       id: patientId,

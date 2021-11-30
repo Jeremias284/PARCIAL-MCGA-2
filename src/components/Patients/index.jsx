@@ -13,14 +13,13 @@ import { useDispatch, useSelector } from 'react-redux';
 const Patients = () => {
   const dispatch = useDispatch();
   const { list, modalType, meta, isLoading } = useSelector(
-    (state) => state.patients
+    (state) => state.patients     
   );
   useEffect(() => {
     dispatch(getPatients());
     return () => {};
   }, []);
-
-
+  console.log(list);
   const showAddModal = () => {
     showModal(modalTypes.ADD_PATIENT); 
   };
@@ -39,13 +38,13 @@ const Patients = () => {
       </Button>
 
       <Modal>
-        {modalType === 'ADD_PATIENT' && <PatientForm />}{' '}
+        {modalType === 'ADD_PATIENT' && (<PatientForm />)}
         {modalType === 'DELETE_PATIENT' && (
           <ConfirmationMessage patientId={meta.id} patientName={meta.name} />
         )}
         {modalType === 'UPDATE_PATIENT' && (
           <PatientForm patient={meta.patient} />
-        )}{' '}
+        )}
       </Modal>
 
       <PatientList patients={list} isLoading={isLoading} />

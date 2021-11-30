@@ -21,6 +21,7 @@ import TextInput from '../../Shared/TextInput';
 import styles from './patientForm.module.css';
 
 const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
+  console.log("ENTRE AL FORM")
   const onSubmitPatient = (values) => {
     if (patient) {
       updatePatient({ ...values, id: patient._id });
