@@ -15,6 +15,7 @@ import {
   
   // const URL = process.env.URL_HEROKU;
 
+  //Eliminar
   const urlString = 'http://localhost:7000';
   
   export const getPatientsFetching = () => ({
