@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Patients = () => {
   const dispatch = useDispatch();
-   const { list, isLoading } = useSelector(
+  const { list, isLoading } = useSelector(
     (state) => state.patients   
   );
 
