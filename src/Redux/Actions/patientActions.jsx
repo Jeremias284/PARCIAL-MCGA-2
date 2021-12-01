@@ -69,9 +69,11 @@ import {
     })
       .then((data) => data.json())
       .then((response) => {
+        console.log(response)
         dispatch(addPatientFulfilled(response));
       })
       .catch(() => {
+        console.log('an error ocurred')
         dispatch(addPatientRejected());
       });
   };

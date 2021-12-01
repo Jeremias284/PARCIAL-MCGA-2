@@ -27,14 +27,14 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const BasicModal = ({ show, closeModal, people }) => {
+const BasicModal = ({ show, closeModal, children }) => {
   const classes = useStyles();
   const [modalStyle] = useState(getModalStyle);
 
   return (
     <Modal open={show} onClose={closeModal}>
       <div style={modalStyle} className={classes.paper}>
-        {people}
+        {children}
       </div>
     </Modal>
   );

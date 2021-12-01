@@ -63,7 +63,7 @@ export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) 
           surname: patient ? patient.surname : '',
           age: patient ? patient.age : '',
           DNI: patient ? patient.DNI: '',
-          turn: patient ? patient.turn : 'Friday',
+          turns: patient ? patient.turn : 'Friday',
           doctor: patient ? patient.doctor : 'DrCalzada',
         }}
         render={({ handleSubmit, form, submitting, pristine }) => (
@@ -109,7 +109,7 @@ export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) 
             </div>
             <div>
               <Field
-                name="turn"
+                name="turns"
                 component={Select}
                 options={turns}
                 label="Turn:"

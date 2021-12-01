@@ -22,14 +22,14 @@ const ConfirmationMessage = ({
       <p>Are you sure to delete patient {patientName}?</p>
       <div className={styles.buttonContainer}>
         <Button type="button" btnLabel="Cancel" onClick={() => closeModal()}>
-          Confirm
+          Cancel
         </Button>
         <Button
           styles={styles.button}
           type="button"
           btnLabel="Confirm"
           onClick={() => onDeletePatient()}
-        />
+        >Confirm</Button>
       </div>
     </div>
   );
