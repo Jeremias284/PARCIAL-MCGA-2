@@ -24,7 +24,7 @@ import styles from './home.module.css';
     <div className={styles.homeContainer}>
       {/* { <h2 className={styles.title}>Patients App</h2>
       <p>Made By Ivan Kopech and Jeremias Calzada</p> } */}
-       <p className={styles.subtitle}>You can join the office</p>
+       <p className={styles.subtitle}>Check your health here</p>
       <List className={styles.list}>
         {patients.isLoading ? (
           <Box sx={{ display: 'flex' }}>
@@ -44,7 +44,7 @@ import styles from './home.module.css';
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
                 })}
-            <p className={styles.text}>Available shift!</p>
+            <p className={styles.text}>Available turn!</p>
           </div>
         )}
         <Divider variant="inset" component="li" />
@@ -57,7 +57,7 @@ import styles from './home.module.css';
             <div className={styles.primary}>
               <SiPython className={styles.icon} />
 
-              <p className={styles.turns}>Python</p>
+              <p className={styles.turns}>Martes</p>
             </div>
 
             {!patients.isLoading &&
@@ -69,7 +69,7 @@ import styles from './home.module.css';
                   return <ItemHome patient={item} key={item._id} />;
                 })}
 
-            <p className={styles.text}>Available shift!</p>
+            <p className={styles.text}>Available turn!</p>
           </div>
         )}
         <Divider variant="inset" component="li" />
@@ -93,7 +93,7 @@ import styles from './home.module.css';
                   return <ItemHome patient={item} key={item._id} />;
                 })}
 
-            <p className={styles.text}>Available shift!</p>
+            <p className={styles.text}>Available turn!</p>
           </div>
         )}
         <Divider variant="inset" component="li" />
@@ -111,12 +111,12 @@ import styles from './home.module.css';
             {!patients.isLoading &&
               patients &&
               patients.list
-                .filter((st) => st.turns.includes('JAVA'))
+                .filter((st) => st.turns.includes('Jueves'))
                 .slice(0, 3)
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
                 })}
-            <p className={styles.text}>Available shift!</p>
+            <p className={styles.text}>Available turn!</p>
           </div>
         )}
       </List>

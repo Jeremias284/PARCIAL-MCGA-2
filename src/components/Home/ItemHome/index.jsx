@@ -6,7 +6,7 @@ export const ItemHome = ({ patient }) => {
   return (
     <div className={styles.itemHomeContainer}>
       <p className={styles.item}>{patient.name}</p>
-      <p className={styles.item}>{patient.lastName}</p>
+      <p className={styles.item}>{patient.surname}</p>
       <p className={styles.item}>({patient.age})</p>
     </div>
   );
