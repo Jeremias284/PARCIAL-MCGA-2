@@ -1,6 +1,6 @@
 .headerContainer {
     width: 100%;
-  }
+}
   
   .header {
     display: flex;
@@ -8,11 +8,47 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(236, 13, 13);
-  }
+}
   
   .title {
     color: white;
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
-  }
+}
+
+  .loginButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .signIn {
+    cursor: pointer;
+    color: wheat;
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+}
+  
+  .signUp {
+    cursor: pointer;
+    color: wheat;
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+}
+  
+  .logOut {
+    cursor: pointer;
+    color: white;
+    padding: 0 0.2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+  
+  .signIn:hover,
+  .signUp:hover,
+  .logOut:hover {
+    text-decoration: underline;
+}

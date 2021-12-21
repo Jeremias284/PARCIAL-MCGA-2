@@ -6,7 +6,6 @@ const Select = ({ input, meta, label, options }) => {
   return (
     <div className={styles.selectContainer}>
       <label className={styles.lbl}>{label}</label>
-      {/* <select className={styles.sel} {...input}> */}
       <NativeSelect className={styles.sel} {...input}>
 
         {options.map((option) => (
@@ -14,7 +13,6 @@ const Select = ({ input, meta, label, options }) => {
             {option.value}
           </option>
         ))}
-      {/* </select> */}
       </NativeSelect>
       {meta.error && meta.touched && (
         <div className={styles.error}>{meta.error}</div>

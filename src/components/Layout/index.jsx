@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import NavBar from './NavBar';
 import Main from './Main';
@@ -6,18 +7,25 @@ import Footer from './Footer';
 import styles from './layout.module.css';
 import PropTypes from 'prop-types'
 
-const Layout = ({ people }) => (
-  <div className={styles.layoutContainer}>
-    <div className={styles.mainContainer}>
-      <Header />
-      <NavBar />
-      <Main container={people} />
-      <Footer />
+const Layout = ({ children }) => {
+  const location = useLocation();
+  return (
+    <div className={styles.layoutContainer}>
+      {location.pathname === '/login' || location.pathname === '/signup' ? (
+        <div className={styles.mainContainer}>
+          <Main container={children} />
+          <Footer />
+        </div>
+      ) : (
+        <div className={styles.mainContainer}>
+          <Header />
+          <NavBar />
+          <Main container={children} />
+          <Footer />
+        </div>
+      )}
     </div>
-  </div>
-);
-Layout.propTypes = {
-  people: PropTypes.object.isRequired,
+  );
 };
 
 export default Layout;

@@ -78,6 +78,8 @@ export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) 
                 placeholder="Add name"
                 label="Name:"
                 validate={composeValidators(required, trim, string)}
+                variant="filled"
+                size="small"
               />
             </div>
             <div className={styles.textInput}>
@@ -87,6 +89,8 @@ export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) 
                 placeholder="Add last name"
                 label="Last name:"
                 validate={composeValidators(required, trim, string)}
+                variant="filled"
+                size="small"
               />
             </div>
             <div className={styles.textInput}>
@@ -96,6 +100,8 @@ export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) 
                 placeholder="Add age"
                 label="Age:"
                 validate={composeValidators(required, number, minValue, trim)}
+                variant="filled"
+                size="small"
               />
             </div>
             <div className={styles.textInput}>
@@ -105,6 +111,8 @@ export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) 
                 placeholder="Add DNI"
                 label="DNI  :"
                 validate={composeValidators(required, number, minValue, trim)}
+                variant="filled"
+                size="small"
               />
             </div>
             <div>
