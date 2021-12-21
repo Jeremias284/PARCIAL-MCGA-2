@@ -1,29 +1,44 @@
 import React from 'react';
-import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Layout from '../components/Layout';
 import Home from '../components/Home';
+import Login from '../components/Login';
+import Users from '../components/Users';
 import Patients from '../components/Patients';
+import PrivateRoute from './PrivateRoute';
+import RoutePublic from './PublicRoute';
 
 
-const Routes = () => {
+const Routes = ({ name }) => {
   return (
-    <Router>
-      <Switch>
-        <Redirect exact push from="/" to="/home" />
-        <Route path="/home">
-          <Layout people = {<Home/>}/>
-        </Route>
-        <Route exact path="/patients">
-          <Layout people={<Patients />}/>
-        </Route>
-        <Route exact path="*">
-          <Layout>
-            <h2>Not Found</h2>
-          </Layout>
-        </Route>
-      </Switch>
-    </Router>
+    <Switch>
+      <Redirect exact push from="/" to="/home" />
+      <Route path="/home">
+        <Layout>
+          <Home />
+        </Layout>
+      </Route>
+      <RoutePublic
+        exact
+        path="/login"
+        component={Login}
+        authenticated={!!name}
+      />
+      <RoutePublic
+        exact
+        path="/signup"
+        component={Users}
+        authenticated={!!name}
+      />
+      <PrivateRoute exact path="/patients" component={Patients} />
+      <Redirect exact push from="*" to="/home" />
+    </Switch>
   );
 };
 
-export default Routes;
+const mapStateToProps = (state) => ({
+  name: state.auth.name,
+});
+
+export default connect(mapStateToProps, null)(Routes);
