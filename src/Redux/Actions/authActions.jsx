@@ -5,7 +5,7 @@ import {
     SIGN_UP_FETCHING,
     SIGN_UP_REJECTED,
     LOG_OUT,
-  } from '../types/authTypes';
+  } from '../Types/authTypes';
   
   const URL = process.env.REACT_APP_BACKEND_URL;
   

@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
-import { logOut as logOutAction } from '../../../redux/actions/authActions';
+import { logOut as logOutAction } from '../../../Redux/Actions/authActions';
 import styles from './header.module.css';
 
 const Header = ({ authenticated, name, logOut }) => {

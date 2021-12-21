@@ -66,7 +66,7 @@ const Users = ({ signUp, isLoading }) => {
                   name="name"
                   component={TextInput}
                   placeholder="name"
-                  validate={composeValidators(usernameFormat, required, trim)}
+                  //validate={composeValidators(required)}
                 />
               </div>
               <div className={styles.textInput}>
@@ -76,7 +76,7 @@ const Users = ({ signUp, isLoading }) => {
                   name="password"
                   component={TextInput}
                   placeholder="Password"
-                  validate={composeValidators(required, trim)}
+                  // validate={composeValidators(required)}
                 />
               </div>
               {isLoading ? (

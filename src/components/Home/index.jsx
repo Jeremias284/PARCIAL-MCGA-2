@@ -1,5 +1,5 @@
 // import React from 'react';
-import styles from './home.module.css';
+
 import React, { useEffect } from 'react';
 import { SiJava, SiJavascript, SiPython } from 'react-icons/si';
 import { FcLock } from 'react-icons/fc';
@@ -9,7 +9,7 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import { getPatients as getPatiensActions } from '../../redux/Actions/patientActions';
+import { getPatients as getPatiensActions } from '../../Redux/Actions/patientActions';
 // eslint-disable-next-line import/no-named-as-default
 import ItemHome from './ItemHome';
 import styles from './home.module.css';
