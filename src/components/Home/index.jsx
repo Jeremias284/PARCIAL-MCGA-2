@@ -146,6 +146,9 @@ import styles from './home.module.css';
           </div>
         )}
       </List>
+      <hr />
+      <hr />
+      
     </div>
   );
 };
