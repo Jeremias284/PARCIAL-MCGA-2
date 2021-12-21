@@ -119,6 +119,32 @@ import styles from './home.module.css';
             <p className={styles.text}>Available turn!</p>
           </div>
         )}
+        
+        <Divider variant="inset" component="li" />
+        {patients.isLoading ? (
+          <Box sx={{ display: 'flex' }}>
+            <CircularProgress />
+          </Box>
+        ) : (
+          <div className={styles.item}>
+            <div className={styles.primary}>
+              <SiPython className={styles.icon} />
+
+              <p className={styles.turns}>Viernes</p>
+            </div>
+
+            {!patients.isLoading &&
+              patients &&
+              patients.list
+                .filter((st) => st.turns.includes('Viernes'))
+                .slice(0, 3)
+                .map((item) => {
+                  return <ItemHome patient={item} key={item._id} />;
+                })}
+
+            <p className={styles.text}>Available turn!</p>
+          </div>
+        )}
       </List>
     </div>
   );
