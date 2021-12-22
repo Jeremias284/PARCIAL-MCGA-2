@@ -31,12 +31,12 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <p className={styles.turns}>Lunes</p>
+              <p className={styles.turns}>Monday</p>
             </div>
             {!patients.isLoading &&
               patients &&
               patients.list
-                .filter((st) => st.turns.includes('Lunes'))
+                .filter((st) => st.turns.includes('Monday'))
                 .slice(0, 3)
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
@@ -53,13 +53,13 @@ import styles from './home.module.css';
           <div className={styles.item}>
             <div className={styles.primary}>
 
-              <p className={styles.turns}>Martes</p>
+              <p className={styles.turns}>Tuesday</p>
             </div>
 
             {!patients.isLoading &&
               patients &&
               patients.list
-                .filter((st) => st.turns.includes('Martes'))
+                .filter((st) => st.turns.includes('Tuesday'))
                 .slice(0, 3)
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
@@ -76,13 +76,13 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <p className={styles.turns}>Miercoles</p>
+              <p className={styles.turns}>Wednesday</p>
             </div>
 
             {!patients.isLoading &&
               patients &&
               patients.list
-                .filter((st) => st.turns.includes('Miercoles'))
+                .filter((st) => st.turns.includes('Wednesday'))
                 .slice(0, 3)
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
@@ -99,13 +99,13 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <p className={styles.turns}>Jueves</p>
+              <p className={styles.turns}>Thursday</p>
             </div>
 
             {!patients.isLoading &&
               patients &&
               patients.list
-                .filter((st) => st.turns.includes('Jueves'))
+                .filter((st) => st.turns.includes('Thursday'))
                 .slice(0, 3)
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
@@ -122,13 +122,13 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <p className={styles.turns}>Viernes</p>
+              <p className={styles.turns}>Friday</p>
             </div>
 
             {!patients.isLoading &&
               patients &&
               patients.list
-                .filter((st) => st.turns.includes('Viernes'))
+                .filter((st) => st.turns.includes('Friday'))
                 .slice(0, 3)
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;

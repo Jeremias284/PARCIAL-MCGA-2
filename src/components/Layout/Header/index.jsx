@@ -25,6 +25,7 @@ const Header = ({ authenticated, name, logOut }) => {
      
               <p className={styles.signIn}> Sign In</p>
             </Link>
+       
             <div className={styles.signUp}>|</div>
             <Link to="/signup" style={{ textDecoration: 'none' }}>
               <p className={styles.signUp}>Sign Up</p>
