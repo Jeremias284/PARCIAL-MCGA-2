@@ -7,7 +7,8 @@ import {
     LOG_OUT,
   } from '../Types/authTypes';
   
-  const URL = process.env.REACT_APP_BACKEND_URL;
+  // const URL = process.env.REACT_APP_BACKEND_URL;
+     const URL = 'http://localhost:7000';
   
   const loginFetching = () => ({
     type: LOG_IN_FETCHING,
@@ -35,6 +36,7 @@ import {
       .then((response) => {
         if (response.errors === undefined) {
           dispatch(loginFulfilled(values.name));
+          dispatch(loginFulfilled(values.password));
         } else {
           dispatch(loginRejected());
         }
