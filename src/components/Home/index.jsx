@@ -38,7 +38,6 @@ import styles from './home.module.css';
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
                 })}
-            <p className={styles.text}>Available turn!</p>
           </div>
         )}
         <Divider variant="inset" component="li" />
@@ -62,7 +61,6 @@ import styles from './home.module.css';
                   return <ItemHome patient={item} key={item._id} />;
                 })}
 
-            <p className={styles.text}>Available turn!</p>
           </div>
         )}
         <Divider variant="inset" component="li" />
@@ -85,7 +83,6 @@ import styles from './home.module.css';
                   return <ItemHome patient={item} key={item._id} />;
                 })}
 
-            <p className={styles.text}>Available turn!</p>
           </div>
         )}
         <Divider variant="inset" component="li" />
@@ -107,7 +104,6 @@ import styles from './home.module.css';
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
                 })}
-            <p className={styles.text}>Available turn!</p>
           </div>
         )}
         
@@ -130,8 +126,6 @@ import styles from './home.module.css';
                 .map((item) => {
                   return <ItemHome patient={item} key={item._id} />;
                 })}
-
-            <p className={styles.text}>Available turn!</p>
           </div>
         )}
       </List>
