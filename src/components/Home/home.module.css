@@ -11,16 +11,7 @@
     font-size: 2rem;
     
   }
-  .subtitle {
-    margin-bottom: 3rem;
-    margin-top: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(253, 0, 0);
-    padding: 1rem;
-    border-radius: 10px;
-    font-size: 1.3rem;
-  }
-  
+
   p {
     font-size: 1.5rem;
   }
