@@ -34,12 +34,24 @@ export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) 
 
   const turns = [
     {
-      id: 'Friday',
-      value: 'Friday',
-    },
-    {
       id: 'Monday',
       value: 'Monday',
+    },
+    {
+      id: 'Tuesday',
+      value: 'Tuesday',
+    },
+    {
+      id: 'Wednesday',
+      value: 'Wednesday',
+    },
+    {
+      id: 'Thursday',
+      value: 'Thursday',
+    },
+    {
+      id: 'Friday',
+      value: 'Friday',
     },
   ];
 
@@ -51,6 +63,10 @@ export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) 
     {
       id: 'DrKopech',
       value: 'DrKopech',
+    },
+    {
+      id: 'DrMena',
+      value: 'DrMena',
     },
   ];
 
