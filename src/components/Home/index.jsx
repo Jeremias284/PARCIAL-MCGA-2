@@ -22,9 +22,7 @@ import styles from './home.module.css';
   
   return (
     <div className={styles.homeContainer}>
-      {/* { <h2 className={styles.title}>Patients App</h2>
-      <p>Made By Ivan Kopech and Jeremias Calzada</p> } */}
-       <p className={styles.subtitle}>Check your health here</p>
+       <p className={styles.subtitle}>Check your turn</p>
       <List className={styles.list}>
         {patients.isLoading ? (
           <Box sx={{ display: 'flex' }}>
@@ -33,7 +31,6 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <FcLock className={styles.icon} />
               <p className={styles.turns}>Lunes</p>
             </div>
             {!patients.isLoading &&
@@ -55,7 +52,6 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <SiPython className={styles.icon} />
 
               <p className={styles.turns}>Martes</p>
             </div>
@@ -80,7 +76,6 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <SiJavascript className={styles.icon} />
               <p className={styles.turns}>Miercoles</p>
             </div>
 
@@ -104,7 +99,6 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <SiJava className={styles.icon} />
               <p className={styles.turns}>Jueves</p>
             </div>
 
@@ -128,8 +122,6 @@ import styles from './home.module.css';
         ) : (
           <div className={styles.item}>
             <div className={styles.primary}>
-              <SiPython className={styles.icon} />
-
               <p className={styles.turns}>Viernes</p>
             </div>
 
