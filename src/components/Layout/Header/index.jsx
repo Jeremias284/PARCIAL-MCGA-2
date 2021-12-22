@@ -22,7 +22,8 @@ const Header = ({ authenticated, name, logOut }) => {
         {!authenticated && (
           <div className={styles.loginButtons}>
             <Link to="/login" style={{ textDecoration: 'none' }}>
-              <p className={styles.signIn}>Sign In</p>
+     
+              <p className={styles.signIn}> Sign In</p>
             </Link>
             <div className={styles.signUp}>|</div>
             <Link to="/signup" style={{ textDecoration: 'none' }}>
