@@ -1,5 +1,5 @@
 .formContainer {
-    color: rgb(36, 36, 75);
+    color: rgb(19, 19, 19);
     border-radius: 4px;
 }
   
@@ -12,6 +12,7 @@
     margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: 600;
+    
 }
   
   .buttonContainer {
@@ -25,6 +26,7 @@
     border: 1px solid rgb(255, 4, 4);
     padding: 0.5rem;
     border-radius: 5px;
+    color:black
 }
   .btnHome {
     width: 30px;

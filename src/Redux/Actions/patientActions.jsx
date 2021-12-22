@@ -13,9 +13,8 @@ import {
     DELETE_PATIENT_REJECTED,
   } from '../Types/patientActionTypes';
   
-  // const URL = process.env.URL_HEROKU;
 
-  //Eliminar
+
   const urlString = 'http://localhost:7000';
   
   export const getPatientsFetching = () => ({
@@ -36,7 +35,7 @@ import {
     return fetch(`http://localhost:7000/patients`)
       .then((data) => data.json())
       .then((response) => {
-       console.log(response);
+     
         dispatch(getPatientsFulfilled(response));
       })
       .catch((nombre) => {
@@ -58,7 +57,7 @@ import {
   });
   
   export const addPatient = (patient) => (dispatch) => {
-    console.log('ingresa add')
+    //console.log('ingresa add')
     dispatch(addPatientFetching());
     return fetch(`http://localhost:7000/patients`, {
       method: 'POST',
@@ -69,7 +68,7 @@ import {
     })
       .then((data) => data.json())
       .then((response) => {
-        console.log(response)
+        //console.log(response)
         dispatch(addPatientFulfilled(response));
       })
       .catch(() => {

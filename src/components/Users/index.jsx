@@ -66,7 +66,6 @@ const Users = ({ signUp, isLoading }) => {
                   name="name"
                   component={TextInput}
                   placeholder="name"
-                  //validate={composeValidators(required)}
                 />
               </div>
               <div className={styles.textInput}>
@@ -76,7 +75,6 @@ const Users = ({ signUp, isLoading }) => {
                   name="password"
                   component={TextInput}
                   placeholder="Password"
-                  // validate={composeValidators(required)}
                 />
               </div>
               {isLoading ? (
@@ -91,7 +89,7 @@ const Users = ({ signUp, isLoading }) => {
                   <p className={styles.text}>
                     Already have an account?
                     <Link to="/login" style={{ textDecoration: 'none' }}>
-                      <span> </span>Sign In →
+                      <span> </span>Sign In 
                     </Link>
                   </p>
                 </div>

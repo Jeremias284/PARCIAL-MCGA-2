@@ -62,7 +62,7 @@ const Login = ({ logIn, isLoading, error }) => {
                   name="name"
                   component={TextInput}
                   placeholder="name"
-                  // validate={required}
+ 
                 />
               </div>
               <div className={styles.textInput}>
@@ -72,7 +72,7 @@ const Login = ({ logIn, isLoading, error }) => {
                   name="password"
                   component={TextInput}
                   placeholder="Password"
-                  // validate={required}
+             
                 />
               </div>
               {error && (

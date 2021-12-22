@@ -22,7 +22,7 @@ import styles from './patientForm.module.css';
 
 
 export const PatientForm = ({ addPatient, updatePatient, closeModal, patient }) => {
-  console.log("Entre");
+  // console.log("Entre");
   const onSubmitPatient = (values) => {
     if (patient) {
       updatePatient({ ...values, id: patient._id });

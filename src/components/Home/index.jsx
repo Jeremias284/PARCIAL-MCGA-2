@@ -1,8 +1,6 @@
 // import React from 'react';
 
 import React, { useEffect } from 'react';
-import { SiJava, SiJavascript, SiPython } from 'react-icons/si';
-import { FcLock } from 'react-icons/fc';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import List from '@mui/material/List';
@@ -14,7 +12,7 @@ import { getPatients as getPatiensActions } from '../../Redux/Actions/patientAct
 import ItemHome from './ItemHome';
 import styles from './home.module.css';
 
-// const Home = () => {
+
   const Home = ({ getPatients, patients }) => {
     useEffect(() => {
       getPatients();
