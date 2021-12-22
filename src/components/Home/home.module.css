@@ -15,7 +15,7 @@
     margin-bottom: 3rem;
     margin-top: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(231, 217, 170);
+    background-color: rgb(253, 0, 0);
     padding: 1rem;
     border-radius: 10px;
     font-size: 1.3rem;
@@ -32,15 +32,10 @@
     flex-wrap: wrap;
   }
   
-  .icon {
-    width: 25px;
-    height: 25px;
-    margin-right: 0.5rem;
-  }
   
   .turns {
     font-weight: bolder;
-    font-size: 1rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
   }
@@ -49,7 +44,7 @@
     display: flex;
     flex-direction: column;
     border: 2px solid rgb(20, 28, 66);
-    border-radius: 4px;
+    border-radius: 2px;
     width: 15rem;
     height: 18rem;
     margin-bottom: 1rem;
@@ -65,7 +60,7 @@
   
   .text {
     text-align: center;
-    color: gray;
+    color: rgb(0, 0, 0);
     font-family: monospace;
     font-size: 0.9rem;
   }
