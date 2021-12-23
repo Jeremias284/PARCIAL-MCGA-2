@@ -20,6 +20,7 @@ import styles from './home.module.css';
   
   return (
     <div className={styles.homeContainer}>
+      <p className={styles.subtitle}>Assigned turns for this week:</p>
       <List className={styles.list}>
         {patients.isLoading ? (
           <Box sx={{ display: 'flex' }}>
